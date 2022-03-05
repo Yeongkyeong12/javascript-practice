@@ -1,0 +1,12 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /*스크롤바 제거를 위한 margin 설정*/
+  margin: 0;
+}
+
+body.dark {
+}
