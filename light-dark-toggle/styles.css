@@ -1,4 +1,10 @@
 body {
+  --accent-color: orangered;
+  --background-color: white;
+  --text-color: black;
+  --button-text-color: var(--background-color);
+  --transition-delay: 1s;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,7 +12,39 @@ body {
   height: 100vh;
   /*스크롤바 제거를 위한 margin 설정*/
   margin: 0;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 body.dark {
+  --accent-color: #ddd270;
+  --background-color: #333;
+  --text-color: #fff;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.theme-toggle-button {
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  border: none;
+  outline: none;
+  transition: var(--transition-delay);
+  transform: scale(1);
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus {
+  transform: scale(1.1);
 }
